@@ -6,6 +6,11 @@ geographiclib
 .. automodule:: geographiclib
    :members: __version_info__, __version__
 
+geographiclib.geocentric
+------------------------
+.. automodule:: geographiclib.geocentric
+   :members:
+
 geographiclib.geodesic
 ----------------------
 .. automodule:: geographiclib.geodesic
