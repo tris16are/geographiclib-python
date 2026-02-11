@@ -41,10 +41,10 @@ message (STATUS
 
 # Set source files here since they are used in multiple places
 set (PYTHON_FILES
-  accumulator.py constants.py geodesiccapability.py
+  accumulator.py constants.py geocentric.py geodesiccapability.py
   geodesicline.py geodesic.py geomath.py polygonarea.py)
 set (TEST_FILES
-  test/__init__.py test/test_geodesic.py test/test_sign.py)
+  test/__init__.py test/test_geocentric.py test/test_geodesic.py test/test_sign.py)
 
 add_subdirectory (geographiclib)
 
@@ -52,6 +52,8 @@ enable_testing ()
 # Run the test suite
 add_test (NAME testsuite
   COMMAND ${Python_EXECUTABLE} -m unittest -v geographiclib.test.test_geodesic)
+add_test (NAME testgeocentric
+  COMMAND ${Python_EXECUTABLE} -m unittest -v geographiclib.test.test_geocentric)
 add_test (NAME testsign
   COMMAND ${Python_EXECUTABLE} -m unittest -v geographiclib.test.test_sign)
 
